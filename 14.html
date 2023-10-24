@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lan="en">
+
+<head>
+    <title>Event handling</title>
+    <script>
+        function less() {
+            el = document.getElementById("task");
+            while(el.firstChild)
+            {
+                el.removeChild(el.firstChild)
+            }
+        }
+        function front() {
+            document.querySelector("#back").innerHTML += `
+            <div id="task">
+                <span id="taskname">
+                    <b>Cource Details<b>
+                </span>
+            <button onclick="less()">Show less</button>    
+            </div>`;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Javascript</h1>
+    </div>
+    <div class="card">
+        <img src="cake.jpeg">
+        <br>Introduction to JS programming<br>
+        <button id="front" onclick="front()">Show more</button>
+    </div>
+    <div id="back"></div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>querySelector</title>
+    </head>
+    <style>
+        .circle{
+            border-radius: 50%;
+            border:5px solid red;
+            height: 300px;
+            width: 300px;
+        }
+        .fancy{
+            background-color: brown;
+        }
+    </style>
+    <body>
+        <div class="circle"></div>
+        <button>Toggle</button>
+        <script>
+            const circle = document.querySelector(".circle");
+            const button = document.querySelector("button");
+            button.addEventListener('click',function(){
+                circle.classList.toggle('fancy')
+            })
+        </script>
+    </body>
+</html>

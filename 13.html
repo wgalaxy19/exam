@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation</title>
+        <style>
+            #container{
+                width: 2000px;
+                height: 800px;
+                border: 2px solid black;
+            }
+            #car{
+                position: absolute;
+                width: 400px;
+                height:250px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <img src="car.png" id="car">
+        </div>
+
+        <script>
+            (function (selector){
+                let start_pos = 2;
+                let end_pos = document.querySelector("#container").getBoundingClientRect().width;
+                let interval = setInterval(function(){
+                    if(selector.offsetLeft >= end_pos)
+                    {
+                        start_pos=2;
+                    }
+                    else{
+                        start_pos++;
+                    }
+                    selector.style = `left: ${start_pos}px`;
+
+                },10); 
+
+            })(document.querySelector("#car"))  ;
+        </script>
+    </body>
+</html>
