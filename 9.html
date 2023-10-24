@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+               function addition(){
+                a = Number(document.cal.first.value);
+                b = Number(document.cal.second.value);
+                c = a+b;
+                document.cal.result.value = c;
+               } 
+               function substraction(){
+                a = Number(document.cal.first.value);
+                b = Number(document.cal.second.value);
+                c = a-b;
+                document.cal.result.value = c;
+               } 
+               function multiplication(){
+                a = Number(document.cal.first.value);
+                b = Number(document.cal.second.value);
+                c = a*b;
+                document.cal.result.value = c;
+               } 
+               function division(){
+                a = Number(document.cal.first.value);
+                b = Number(document.cal.second.value);
+                c = a/b;
+                document.cal.result.value = c;
+               } 
+               function addition(){
+                a = Number(document.cal.first.value);
+                b = Number(document.cal.second.value);
+                c = a % b;
+                document.cal.result.value = c;
+               } 
+               function clearAll(){
+                document.cal.first.value="";
+                document.cal.second.value="";
+                document.cal.result.value = "";
+               } 
+        </script>
+        <div>
+            <h1>arithmetic operations</h1>
+            <form name="cal">
+                Number1:<input type="text" name="first"><br><br>
+                Number2:<input type="text" name="second"><br><br>
+                <input type="button" value="Add" onclick="addition()">
+                <input type="button" value="Sub" onclick="subtraction()">
+                <input type="button" value="Mult" onclick="multiplication()">
+                <input type="button" value="Div" onclick="division()">
+                <input type="button" value="Mod" onclick="modulus()">
+                <input type="button" value="Clear" onclick="clearAll()"><br><br>
+                Result:<input type="text" name="result">
+
+            </form>
+        </div>
+    </body>
+</html>
